@@ -251,26 +251,6 @@ class Menu extends Component
             ],
             [
                 'type'    => 'menu-item',
-                'text'    => 'Semesters',
-                'icon'    => 'fas fa-clock',
-                'can'     => 'menu-semester',
-                'submenu' => [
-                    [
-                        'type'  => 'menu-item',
-                        'text'  => 'View semesters',
-                        'route' => 'semesters.index',
-                        'can'   => 'read semester',
-                    ],
-                    [
-                        'type'  => 'menu-item',
-                        'text'  => 'Create semester',
-                        'route' => 'semesters.create',
-                        'can'   => 'create semester',
-                    ],
-                ],
-            ],
-            [
-                'type'    => 'menu-item',
                 'text'    => 'Fees',
                 'icon'    => 'fas fa-dollar',
                 'can'     => 'menu-fee',
@@ -313,6 +293,27 @@ class Menu extends Component
                     ],
                 ],
             ],
+            ['header' => 'Academic', 'can' => 'header-academics'],
+            [
+                'type'    => 'menu-item',
+                'text'    => 'Semesters',
+                'icon'    => 'fas fa-clock',
+                'can'     => 'menu-semester',
+                'submenu' => [
+                    [
+                        'type'  => 'menu-item',
+                        'text'  => 'View semesters',
+                        'route' => 'semesters.index',
+                        'can'   => 'read semester',
+                    ],
+                    [
+                        'type'  => 'menu-item',
+                        'text'  => 'Create semester',
+                        'route' => 'semesters.create',
+                        'can'   => 'create semester',
+                    ],
+                ],
+            ],
             [
                 'type'    => 'menu-item',
                 'text'    => 'Subjects',
@@ -336,27 +337,6 @@ class Menu extends Component
                         'text'  => 'Assign teacher to subjects',
                         'route' => 'subjects.assign-teacher',
                         'can'   => 'update subject',
-                    ],
-                ],
-            ],
-            ['header' => 'Academics', 'can' => 'header-academics'],
-            [
-                'type'    => 'menu-item',
-                'text'    => 'Notices',
-                'icon'    => 'fas fa-bell',
-                'can'     => 'menu-notice',
-                'submenu' => [
-                    [
-                        'type'  => 'menu-item',
-                        'text'  => 'View notices',
-                        'route' => 'notices.index',
-                        'can'   => 'read notice',
-                    ],
-                    [
-                        'type'  => 'menu-item',
-                        'text'  => 'Create notice',
-                        'route' => 'notices.create',
-                        'can'   => 'create notice',
                     ],
                 ],
             ],
@@ -479,6 +459,26 @@ class Menu extends Component
                         'text'  => 'Create Grades',
                         'route' => 'grade-systems.create',
                         'can'   => 'create grade system',
+                    ],
+                ],
+            ],
+            [
+                'type'    => 'menu-item',
+                'text'    => 'Notices',
+                'icon'    => 'fas fa-bell',
+                'can'     => 'menu-notice',
+                'submenu' => [
+                    [
+                        'type'  => 'menu-item',
+                        'text'  => 'View notices',
+                        'route' => 'notices.index',
+                        'can'   => 'read notice',
+                    ],
+                    [
+                        'type'  => 'menu-item',
+                        'text'  => 'Create notice',
+                        'route' => 'notices.create',
+                        'can'   => 'create notice',
                     ],
                 ],
             ],
