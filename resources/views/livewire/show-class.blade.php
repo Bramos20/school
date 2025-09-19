@@ -3,7 +3,7 @@
         <h2 class="card-title">{{$class->name}}</h2>
     </div>
     <div class="card-body">
-        <h3 class="text-center text-lg md:text-3xl font-bold my-5">Sections in class</h1>
+        <h3 class="text-center text-lg md:text-3xl font-bold my-5">Streams in Grade</h1>
         <livewire:datatable :model="App\Models\MyClass::class" uniqueId="section-list-table" :filters="[['name' => 'find' , 'arguments' => [$class->id]], ['name' => 'sections']]" :columns="
             [
             ['property' => 'name'] , 

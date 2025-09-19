@@ -8,7 +8,7 @@
             ['property' => 'name'] , 
             ['property' => 'email'] , 
             ['property' => 'admission_number' ,'relation' => 'graduatedStudentRecord'] , 
-            ['property' => 'name', 'name' => 'From Class' ,'relation' => 'graduatedStudentRecord.myClass'] , 
+            ['property' => 'name', 'name' => 'From Grade' ,'relation' => 'graduatedStudentRecord.myClass'] ,
             ['property' => 'name', 'name' => 'From section' ,'relation' => 'graduatedStudentRecord.section'] , 
             ['type' => 'dropdown', 'name' => 'actions','links' => [
                 ['href' => 'students.edit', 'text' => 'Manage Profile', 'icon' => 'fas fa-pen',],

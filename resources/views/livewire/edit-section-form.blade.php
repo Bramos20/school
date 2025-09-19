@@ -5,9 +5,9 @@
     <div class="card-body">
         <form action="{{route('sections.update', $section->id)}}" method="POST" class="md:w-6/12">
             <x-display-validation-errors />
-            <x-input id="name" name="name" label="Section name" placeholder="Enter section name" value="{{$section->name}}" />
+            <x-input id="name" name="name" label="Stream name" placeholder="Enter stream name" value="{{$section->name}}" />
             @csrf
-            <x-input  id="class" name="class" label="Section class" placeholder="Enter section class" value="{{$section->myClass->name}}" disabled/>
+            <x-input  id="class" name="class" label="Stream Grade" placeholder="Enter stream grade" value="{{$section->myClass->name}}" disabled/>
             @method('put')
             <x-button label="Edit" theme="primary" icon="fas fa-key" type="submit" class="w-full md:w:1/2"/>
         </form>

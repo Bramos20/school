@@ -472,6 +472,22 @@ class PermissionSeeder extends Seeder
         Permission::firstOrCreate([
             'name' => 'menu-fee',
         ]);
+
+        //permissions for assessments
+        Permission::firstOrCreate(['name' => 'create assessment']);
+        Permission::firstOrCreate(['name' => 'read assessment']);
+        Permission::firstOrCreate(['name' => 'update assessment']);
+        Permission::firstOrCreate(['name' => 'delete assessment']);
+
+        //permissions for portfolio
+        Permission::firstOrCreate(['name' => 'create portfolio']);
+        Permission::firstOrCreate(['name' => 'read portfolio']);
+        Permission::firstOrCreate(['name' => 'update portfolio']);
+        Permission::firstOrCreate(['name' => 'delete portfolio']);
+
+        //menu permissions
+        Permission::firstOrCreate(['name' => 'menu-assessment']);
+        Permission::firstOrCreate(['name' => 'menu-portfolio']);
         /**
          * assign permissions to roles.
          */
@@ -496,6 +512,8 @@ class PermissionSeeder extends Seeder
             'menu-parent',
             'menu-account-application',
             'menu-fee',
+            'menu-assessment',
+            'menu-portfolio',
             'manage school settings',
             'create section',
             'read section',
@@ -598,6 +616,14 @@ class PermissionSeeder extends Seeder
             'read fee invoice record',
             'update fee invoice record',
             'delete fee invoice record',
+            'create assessment',
+            'read assessment',
+            'update assessment',
+            'delete assessment',
+            'create portfolio',
+            'read portfolio',
+            'update portfolio',
+            'delete portfolio',
         ]);
 
         //assign permissions to teacher
@@ -611,6 +637,8 @@ class PermissionSeeder extends Seeder
             'menu-notice',
             'menu-student',
             'menu-grade-system',
+            'menu-assessment',
+            'menu-portfolio',
             'read student',
             'read exam',
             'read exam slot',
@@ -629,6 +657,14 @@ class PermissionSeeder extends Seeder
             'delete exam record',
             'read notice',
             'check result',
+            'create assessment',
+            'read assessment',
+            'update assessment',
+            'delete assessment',
+            'create portfolio',
+            'read portfolio',
+            'update portfolio',
+            'delete portfolio',
         ]);
 
         //assign permissions to student

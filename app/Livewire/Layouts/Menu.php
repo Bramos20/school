@@ -45,6 +45,34 @@ class Menu extends Component
                     ],
                 ],
             ],
+            [
+                'type'    => 'menu-item',
+                'text'    => 'Assessments',
+                'icon'    => 'fas fa-check',
+                'can'     => 'menu-assessment',
+                'submenu' => [
+                    [
+                        'type'  => 'menu-item',
+                        'text'  => 'Create Student Assessment',
+                        'route' => 'student-assessments.create',
+                        'can'   => 'create assessment',
+                    ],
+                ],
+            ],
+            [
+                'type'    => 'menu-item',
+                'text'    => 'Portfolios',
+                'icon'    => 'fas fa-folder',
+                'can'     => 'menu-portfolio',
+                'submenu' => [
+                    [
+                        'type'  => 'menu-item',
+                        'text'  => 'Create Portfolio Item',
+                        'route' => 'portfolios.create',
+                        'can'   => 'create portfolio',
+                    ],
+                ],
+            ],
             ['header' => 'Administration', 'can' => 'header-administrate'],
             [
                 'type'  => 'menu-item',

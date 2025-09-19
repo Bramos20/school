@@ -4,9 +4,9 @@
         ['href'=> route('class-groups.edit', $classGroup->id), 'text'=> "Edit $classGroup->name" , 'active']
 ]])
 
-@section('title', __("Edit Class Group $classGroup->name"))
+@section('title', __("Edit Level $classGroup->name"))
 
-@section('page_heading', __("Edit Class Group $classGroup->name"))
+@section('page_heading', __("Edit Level $classGroup->name"))
 
 @section('content')
     @livewire('edit-class-group-form', ['classGroup' => $classGroup])

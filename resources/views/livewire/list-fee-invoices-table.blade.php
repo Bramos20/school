@@ -53,8 +53,8 @@
                 :columns="[
                     ['property' => 'name',],
                     ['name' => 'Student\'s Name', 'property' => 'name', 'relation' => 'user'],
-                    ['name' => 'Class', 'property' => 'name', 'relation' => 'user.studentRecord.myClass'],
-                    ['name' => 'Section', 'property' => 'name', 'relation' => 'user.studentRecord.section'],
+                    ['name' => 'Grade', 'property' => 'name', 'relation' => 'user.studentRecord.myClass'],
+                    ['name' => 'Stream', 'property' => 'name', 'relation' => 'user.studentRecord.section'],
                     ['name' => 'paid'],
                     ['property'=>'balance'],
                     ['property' => 'due_date'],

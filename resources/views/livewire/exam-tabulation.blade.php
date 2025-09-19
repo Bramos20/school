@@ -18,9 +18,9 @@
                         <option value="{{$item['id']}}">{{$item['name']}}</option>
                     @endforeach
                 </x-select>
-                <x-select id="section" name="section" label="Section" wire:model.live="section">
+                <x-select id="section" name="section" label="Stream" wire:model.live="section">
                     @isset($sections)
-                        <option value="null">Entire Class</option>
+                        <option value="null">Entire Grade</option>
                         @foreach ($sections as $item)
                             <option value="{{$item['id']}}">{{$item['name']}}</option>
                         @endforeach

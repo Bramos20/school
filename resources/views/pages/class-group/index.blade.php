@@ -1,11 +1,11 @@
 @extends('layouts.app', ['breadcrumbs' => [
     ['href'=> route('dashboard'), 'text'=> 'Dashboard'],
-    ['href'=> route('class-groups.index'), 'text'=> 'Class Groups' , 'active']
+    ['href'=> route('class-groups.index'), 'text'=> 'Levels' , 'active']
 ]])
 
-@section('title', __('Class Groups'))
+@section('title', __('Levels'))
 
-@section('page_heading', __('Class Groups'))
+@section('page_heading', __('Levels'))
 
 @section('content')
     @livewire('list-class-groups-table')
