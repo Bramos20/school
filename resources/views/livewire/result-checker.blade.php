@@ -27,7 +27,7 @@
                     </x-select>
                     {{--fields are not available to any role not in list--}}
                     @hasanyrole('super-admin|admin|teacher')
-                        <x-select id="class" name="class" label="Current Class"   wire:model.live="class" group-class="">
+                        <x-select id="class" name="class" label="Current Grade"   wire:model.live="class" group-class="">
                             @isset($classes)
                             @foreach ($classes as $item)
                             <option value="{{$item['id']}}">{{$item['name']}}</option>
@@ -35,7 +35,7 @@
                             @endisset
                             
                         </x-select>
-                        <x-select id="section" name="section" label="Current Section" fgroup-class="col-md-2" wire:model.live="section" group-class="">
+                        <x-select id="section" name="section" label="Current Stream" fgroup-class="col-md-2" wire:model.live="section" group-class="">
                             @isset($sections)
                                 @foreach ($sections as $item)
                                     <option value="{{$item['id']}}">{{$item['name']}}</option>

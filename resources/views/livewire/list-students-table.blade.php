@@ -12,7 +12,7 @@
                 ['property' => 'name'] , 
                 ['property' => 'email'] , 
                 ['property' => 'admission_number' ,'relation' => 'studentRecord'] , 
-                ['property' => 'name', 'name' => 'Class' ,'relation' => 'studentRecord.myClass'] , 
+                ['property' => 'name', 'name' => 'Grade' ,'relation' => 'studentRecord.myClass'] ,
                 ['property' => 'name', 'name' => 'section' ,'relation' => 'studentRecord.section'] , 
                 ['property' => 'locked', 'name' => 'Locked' , 'type' => 'boolean-switch', 'action' => 'user.lock-account', 'field' => 'lock', 'true-statement' => 'Locked', 'false-statement' => 'Unlocked',  'can' => 'lock user'],
                 ['type' => 'dropdown', 'name' => 'actions','links' => [
@@ -35,7 +35,7 @@
                 ['property' => 'name'] , 
                 ['property' => 'email'] , 
                 ['property' => 'admission_number' ,'relation' => 'studentRecord'] , 
-                ['property' => 'name', 'name' => 'Class' ,'relation' => 'studentRecord.myClass'] , 
+                ['property' => 'name', 'name' => 'Grade' ,'relation' => 'studentRecord.myClass'] ,
                 ['property' => 'name', 'name' => 'section' ,'relation' => 'studentRecord.section'] , 
                 ['type' => 'dropdown', 'name' => 'actions','links' => [
                     ['href' => 'students.show', 'text' => 'View', 'icon' => 'fas fa-eye',  ],

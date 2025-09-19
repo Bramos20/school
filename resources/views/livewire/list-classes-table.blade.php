@@ -1,6 +1,6 @@
 <div class="card" >
     <div class="card-header">
-        <h4 class="card-title">All Classes</h4>
+        <h4 class="card-title">All Grades</h4>
     </div>
     <div class="card-body">
         <livewire:datatable :model="App\Models\School::class" uniqueId="class-list" :filters="[['name' => 'find' , 'arguments' => [auth()->user()->school_id]] , ['name' => 'myClasses'], ['name' => 'with', 'arguments' => ['classGroup']]]" :columns="

@@ -176,5 +176,16 @@ Route::middleware('auth:sanctum', 'verified', 'App\Http\Middleware\PreventLockAc
 
         //notice routes
         Route::resource('notices', NoticeController::class);
+
+        //student assessment routes
+        Route::resource('student-assessments', StudentAssessmentController::class);
+
+        //portfolio routes
+        Route::get('students/{student}/portfolio', ['App\Http\Controllers\PortfolioController', 'index'])->name('portfolios.index');
+        Route::get('portfolios/create', ['App\Http\Controllers\PortfolioController', 'create'])->name('portfolios.create');
+        Route::post('portfolios', ['App\Http\Controllers\PortfolioController', 'store'])->name('portfolios.store');
+
+        //report card routes
+        Route::get('students/{student}/report-card', ['App\Http\Controllers\ReportCardController', 'show'])->name('report-cards.show');
     });
 });

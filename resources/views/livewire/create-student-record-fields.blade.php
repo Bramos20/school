@@ -1,6 +1,6 @@
 <div class="md:grid grid-cols-12 gap-2">
-    <h4 class="text-bold text-xl md:text-3xl font-bold col-span-12 text-center my-2">Class information</h4>
-    <x-select id="class-id" name="my_class_id" label="Choose a class *" group-class="col-span-6" wire:model.live="myClass">
+    <h4 class="text-bold text-xl md:text-3xl font-bold col-span-12 text-center my-2">Grade information</h4>
+    <x-select id="class-id" name="my_class_id" label="Choose a grade *" group-class="col-span-6" wire:model.live="myClass">
         @foreach ($myClasses as $item)
             <option value="{{$item['id']}}">{{$item['name']}}</option>
         @endforeach

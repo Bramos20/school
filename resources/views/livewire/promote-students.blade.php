@@ -6,25 +6,25 @@
         <x-display-validation-errors/>
         {{--Form for selecting class--}}
         <form wire:submit="loadStudents" class="md:grid grid-cols-4 gap-2">
-            <p class="font-bold col-span-4">Please select class and section</p>
-            <x-select id="old-class" name="oldClass" label="Old class" wire:model.live="oldClass">
+            <p class="font-bold col-span-4">Please select grade and stream</p>
+            <x-select id="old-class" name="oldClass" label="Old Grade" wire:model.live="oldClass">
                 @foreach ($classes as $class)
                     <option value="{{$class['id']}}">{{$class['name']}}</option>
                 @endforeach
             </x-select>
-            <x-select id="old-section" name="oldSection" label="Old section" wire:model.live="oldSection" >
+            <x-select id="old-section" name="oldSection" label="Old Stream" wire:model.live="oldSection" >
                 @isset($oldSections)
                     @foreach ($oldSections as $section)
                         <option value="{{$section['id']}}">{{$section['name']}}</option>
                     @endforeach
                 @endisset
             </x-select>
-            <x-select id="new-class" name="newClass" label="New class" wire:model.live="newClass" >
+            <x-select id="new-class" name="newClass" label="New Grade" wire:model.live="newClass" >
                 @foreach ($classes as $class)
                     <option value="{{$class['id']}}">{{$class['name']}}</option>
                 @endforeach
             </x-select>
-            <x-select id="new-section" name="newSection" label="New section" wire:model.live="newSection" >
+            <x-select id="new-section" name="newSection" label="New Stream" wire:model.live="newSection" >
                 @isset($newSections)
                     @foreach ($newSections as $section)
                         <option value="{{$section['id']}}">{{$section['name']}}</option>

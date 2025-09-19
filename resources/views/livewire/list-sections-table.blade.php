@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h4 class="card-title">Section list</h4>
+        <h4 class="card-title">Stream list</h4>
     </div>
     <div class="card-body">
         @if ($classes->isNotEmpty())

@@ -17,7 +17,7 @@
                     <option value="{{$item['id']}}">{{$item['name']}}</option>
                 @endforeach
             </x-select>
-            <x-select id="class" name="class" label="Select class" wire:model.live="class">
+            <x-select id="class" name="class" label="Select Grade" wire:model.live="class">
                 @foreach ($classes as $item)
                     <option value="{{$item['id']}}">{{$item['name']}}</option>
                 @endforeach
@@ -29,7 +29,7 @@
                     @endforeach
                 @endisset
             </x-select>
-            <x-select id="section" name="section" label="Section"  wire:model.live="section">
+            <x-select id="section" name="section" label="Stream"  wire:model.live="section">
                 @isset($sections)
                     @foreach ($sections as $item)
                         <option value="{{$item['id']}}">{{$item['name']}}</option>
@@ -50,8 +50,8 @@
                 <div class="card-body">
                     <div class="md:flex justify-between ">
                         <p class="">Exam: {{$examSelected->name}}</p>
-                        <p class="">Class: {{$classSelected->name}}</p>
-                        <p class="">Section: {{$sectionSelected->name}}</p>
+                        <p class="">Grade: {{$classSelected->name}}</p>
+                        <p class="">Stream: {{$sectionSelected->name}}</p>
                         <p class="">Subject: {{$subjectSelected->name}}</p>
                     </div>
 

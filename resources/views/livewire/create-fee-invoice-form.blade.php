@@ -19,13 +19,13 @@
             <x-loading-spinner wire:target="section"/>
             <x-loading-spinner wire:target="addStudent"/>
             <div class="md:grid md:grid-cols-3 gap-4">
-                <x-select id="classes" name="" label="Class" wire:model.live="class">
+                <x-select id="classes" name="" label="Grade" wire:model.live="class">
                     @foreach ($classes as $item)
                         <option value="{{$item->id}}">{{$item->name}}</option>
                     @endforeach
                 </x-select>
-                <x-select id="section" name="" label="Section" wire:model.live="section">
-                    <option value="">All Sections</option>
+                <x-select id="section" name="" label="Stream" wire:model.live="section">
+                    <option value="">All Streams</option>
                     @isset($sections)
                         @foreach ($sections as $item)
                             <option value="{{$item->id}}" @selected($section == $item->id)>{{$item->name}}</option>
